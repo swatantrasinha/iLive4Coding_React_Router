@@ -6,29 +6,29 @@ function HeaderComp() {
             This is Header Section
             <br/>
 {/* Header Bootstrap Code Starts */}
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
   {/* <a class="navbar-brand" href="#">Navbar</a> */}
-  <Link class="navbar-brand" href="#">Navbar</Link>
+  <Link className="navbar-brand" to="#">Navbar</Link>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+  <div className="collapse navbar-collapse" id="navbarNav">
+    <ul className="navbar-nav">
       
-      <li class="nav-item active">
+      <li className="nav-item active">
         {/* <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a> */}
-        <Link class="nav-link" to="/">Home <span class="sr-only">(current)</span></Link>
+        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
       </li>
       
-      <li class="nav-item">
+      <li className="nav-item">
         {/* <a class="nav-link" href="/about">About</a> */}
-        <Link class="nav-link" to="/about">About</Link>
+        <Link className="nav-link" to="/about">About</Link>
       </li>
 
-      <li class="nav-item">
+      <li className="nav-item">
         {/* <a class="nav-link" href="/services">Services</a> */}
-        <Link class="nav-link" to="/services">Services</Link>
+        <Link className="nav-link" to="/services">Services</Link>
       </li>
       
     </ul>
