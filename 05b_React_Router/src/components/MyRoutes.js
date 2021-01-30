@@ -8,7 +8,8 @@ import Movie_List_Lang_Filtered from './Movie/Movie_List_Lang_Filtered';
 import MyLogin from './MainBody/MyLogin';
 import NotAvailablePage from './MainBody/NotAvailablePage';
 import MyRating from './MainBody/MyRating';
-
+import Natinal_Award_Comp from './Awards/Natinal_Award_Comp';
+import International_Award_Comp from './Awards/International_Award_Comp';
  function MyRoutes() {
      const isLoggedIn = false;
 
@@ -28,6 +29,10 @@ import MyRating from './MainBody/MyRating';
                 <Route path="/assign" >
                     {isLoggedIn ? <MyRating/> : <Redirect to="/login" push />}
                 </Route> 
+
+                <Route path="/national" component={Natinal_Award_Comp}/> 
+                <Route path="/international" component={International_Award_Comp}/> 
+                
             </Switch>
     )
 }

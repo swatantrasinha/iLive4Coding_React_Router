@@ -8,7 +8,7 @@ Dynamic Routing - Nested Routes
 In earlier section we saw 
 in MyMovies component which is displayed on /movies has content :
 
-1. One heading :
+1. The heading :
 <h1> This is Movie Section  </h1>
 
 2. Links for language:

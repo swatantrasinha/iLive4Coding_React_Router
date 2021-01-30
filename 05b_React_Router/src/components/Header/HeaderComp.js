@@ -1,9 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
-//import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
-import MyCustomDropDown from './MyCustomDropDown';
+import {Menu,MenuItem,Button } from '@material-ui/core';
 
 function HeaderComp() {
+  const [buttonStatus, setButtonStatus] = useState(null);
+
+  const openMenu= (event) => {
+     setButtonStatus(true);
+ }
+ const closeMenu= (event) => {
+     setButtonStatus(null);
+ }
+
+
     return (
         <div>
             This is Header Section
@@ -47,10 +56,23 @@ function HeaderComp() {
         <Link className="nav-link" to="/assign">Assign Movie Rating</Link>
       </li>
 
-      <li className="nav-item">
+      {/* <li className="nav-item">
            <MyCustomDropDown/>
-     </li> 
+     </li>  */}
+        <li className="nav-item">
+    
+            <Button onClick={openMenu}>Award</Button>
+                      <Menu open={buttonStatus} >
+                          <MenuItem key={1} onClick={closeMenu}>
+                              <Link to="/national?language=kanada"> National</Link>
+                          </MenuItem>
 
+                          <MenuItem key={2} onClick={closeMenu}>
+                              <Link to="/international?language=french">International</Link>
+                          </MenuItem>
+                      </Menu>
+      </li>
+      
     </ul>
   </div>
 </nav>
