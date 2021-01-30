@@ -13,7 +13,7 @@ import {useParams} from 'react-router-dom';
         const mylist = movieList[lang];
         return mylist.map((ele,index) => {
             return (
-                <li key={index} style={{'list-style': 'none'}} > {ele}  </li>
+                <li key={index} style={{'listStyle': 'none'}} > {ele}  </li>
             )
         })
 

@@ -47,33 +47,10 @@ function HeaderComp() {
         <Link className="nav-link" to="/assign">Assign Movie Rating</Link>
       </li>
 
-      {/* <li className="nav-item dropdown">        
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"> Awarded Movies</a>
-         <div className="dropdown-menu">
-              <Link className="dropdown-item" to="/national">National</Link>
-              <Link className="dropdown-item" to="/global">Global</Link>
-         </div>
-
-      </li> */}
-
-       {/* <li className="nav-item dropdown">
-          <div className="dropdown">
-              <button className="dropbtn">Dropdown 
-                  <i className="fa fa-caret-down"></i>
-              </button>
-
-              <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-
-           </div> 
-      </li>  */}
       <li className="nav-item">
            <MyCustomDropDown/>
-      </li>
-      
+     </li> 
+
     </ul>
   </div>
 </nav>

@@ -8,6 +8,7 @@ import Movie_List_Lang_Filtered from './Movie/Movie_List_Lang_Filtered';
 import MyLogin from './MainBody/MyLogin';
 import NotAvailablePage from './MainBody/NotAvailablePage';
 import MyRating from './MainBody/MyRating';
+
  function MyRoutes() {
      const isLoggedIn = false;
 
