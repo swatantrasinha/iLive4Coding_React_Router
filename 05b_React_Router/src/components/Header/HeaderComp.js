@@ -4,6 +4,7 @@ import {Menu,MenuItem,Button } from '@material-ui/core';
 
 function HeaderComp() {
   const [buttonStatus, setButtonStatus] = useState(null);
+  
 
   const openMenu= (event) => {
      setButtonStatus(true);
@@ -11,6 +12,18 @@ function HeaderComp() {
  const closeMenu= (event) => {
      setButtonStatus(null);
  }
+
+ const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    console.log('handleClick ==> event.currentTarget ==> ' , event.currentTarget);
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    console.log('handleClose !!!!');
+    setAnchorEl(null);
+  };
 
 
     return (
@@ -61,16 +74,23 @@ function HeaderComp() {
      </li>  */}
         <li className="nav-item">
     
-            <Button onClick={openMenu}>Award</Button>
-                      <Menu open={buttonStatus} >
-                          <MenuItem key={1} onClick={closeMenu}>
+            <Button onClick={handleClick}>Award2</Button>
+                      <Menu anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                            >
+                          
+                          <MenuItem key={1} onClick={handleClose}>
                               <Link to="/national?language=kanada"> National</Link>
                           </MenuItem>
 
-                          <MenuItem key={2} onClick={closeMenu}>
+                          <MenuItem key={2} onClick={handleClose}>
                               <Link to="/international?language=french">International</Link>
                           </MenuItem>
+
                       </Menu>
+                       
       </li>
       
     </ul>
