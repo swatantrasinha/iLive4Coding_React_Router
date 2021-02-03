@@ -3,15 +3,6 @@ import {Link} from 'react-router-dom';
 import {Menu,MenuItem,Button } from '@material-ui/core';
 
 function HeaderComp() {
-  const [buttonStatus, setButtonStatus] = useState(null);
-  
-
-  const openMenu= (event) => {
-     setButtonStatus(true);
- }
- const closeMenu= (event) => {
-     setButtonStatus(null);
- }
 
  const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -74,7 +65,7 @@ function HeaderComp() {
      </li>  */}
         <li className="nav-item">
     
-            <Button onClick={handleClick}>Award2</Button>
+            <Button onClick={handleClick}>Award</Button>
                       <Menu anchorEl={anchorEl}
                             keepMounted
                             open={Boolean(anchorEl)}
